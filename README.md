@@ -18,4 +18,4 @@ I develop machine learning models to predict property prices based on the collec
 - `README.md`: You're reading it right now!
 
 ## Usage
-If you just want to se the results, you can check the `analysis.ipynb` file, which contains the results of the data that was scraped on 28/4/2024. Otherwise, first run the `data.py` file and then the `analysis.ipynb` file, where all the results will print out (your results will like be different from mine since property listings will probabli change).
+If you just want to se the results, you can check the `analysis.ipynb` file, which contains the results of the data that was scraped on 28/4/2024. Otherwise, first run the `data.py` file and then the `analysis.ipynb` file, where all the results will print out (your results will like be different from mine since property listings will probably change).
