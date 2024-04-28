@@ -3,12 +3,12 @@ import csv
 from bs4 import BeautifulSoup
 import requests
 
-def find_apartments():
-    # Base URL for apartments in Lusaka (capital of Zambia), with a placeholder for the page number
+def find_property():
+    # Base URL for properties in Lusaka (capital of Zambia), with a placeholder for the page number
     base_url = 'https://www.property24.co.zm/apartments-flats-for-sale-in-lusaka-c2327?Page={}'
 
     # Open CSV file for writing data
-    with open('apartments.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('property.csv', 'w', newline='', encoding='utf-8') as csvfile:
         # Define CSV fieldnames
         fieldnames = ['Price', 'Bedrooms', 'Bathrooms', 'Size']
         # Create CSV writer
@@ -29,32 +29,32 @@ def find_apartments():
                 html_text = response.text
                 # Parse the HTML content using BeautifulSoup
                 soup = BeautifulSoup(html_text, 'lxml')
-                # Find all apartment elements on the page
-                apartments = soup.find_all('span', class_='p24_content')
+                # Find all property elements on the page
+                properties = soup.find_all('span', class_='p24_content')
 
-                # Loop through each apartment element found
-                for apartment in apartments:
+                # Loop through each property element found
+                for property in properties:
                     # Extract price information
-                    price_span = apartment.find('span', class_='p24_price')
+                    price_span = property.find('span', class_='p24_price')
                     price = price_span.text.replace(' ', '').strip() if price_span else 'N/A'
 
                     # Extract bedrooms information
-                    bedrooms_span = apartment.find('span', class_='p24_featureDetails', title='Bedrooms')
+                    bedrooms_span = property.find('span', class_='p24_featureDetails', title='Bedrooms')
                     bedrooms = bedrooms_span.span.text.replace(' ', '').strip() if bedrooms_span else 'N/A'
 
                     # Extract bathrooms information
-                    bathrooms_span = apartment.find('span', class_='p24_featureDetails', title='Bathrooms')
+                    bathrooms_span = property.find('span', class_='p24_featureDetails', title='Bathrooms')
                     bathrooms = bathrooms_span.span.text.replace(' ', '').strip() if bathrooms_span else 'N/A'
 
                     # Extract size information
-                    size_span = apartment.find('span', class_='p24_size')
+                    size_span = property.find('span', class_='p24_size')
                     size = size_span.span.text.replace(' ', '').strip() if size_span else 'N/A'
 
-                    # Write the apartment data to the CSV file
+                    # Write the property data to the CSV file
                     writer.writerow({'Price': price, 'Bedrooms': bedrooms, 'Bathrooms': bathrooms, 'Size': size})
             else:
                 # Print error message if fetching page failed
                 print(f"Failed to fetch page {page_number}. Status code: {response.status_code}")
 
-# Call the function to start scraping apartments data
-find_apartments()
+# Call the function to start scraping property data
+find_property()
