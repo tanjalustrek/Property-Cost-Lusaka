@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 def find_apartments():
-    # Base URL for apartments in Lusaka, with a placeholder for the page number
+    # Base URL for apartments in Lusaka (capital of Zambia), with a placeholder for the page number
     base_url = 'https://www.property24.co.zm/apartments-flats-for-sale-in-lusaka-c2327?Page={}'
 
     # Open CSV file for writing data
