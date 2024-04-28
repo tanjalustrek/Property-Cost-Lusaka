@@ -12,5 +12,5 @@ Once we have the raw data, we perform data preprocessing steps to clean and prep
 We develop machine learning models to predict property prices based on the collected data. The models are trained using regression algorithms (linear, random forests and k-nearest neighbors regression).
 
 ## Repository Structure
-- `data.py/`: Contains the function used to scrape the data.
+- `data.py`: Contains the function used to scrape the data.
 - `
