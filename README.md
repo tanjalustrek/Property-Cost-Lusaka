@@ -1,4 +1,4 @@
-# Propert Cost Lusaka
+# Property Cost Lusaka
 
 This repository contains code for scraping information about properties being sold in Lusaka and building machine learning models to predict property prices based on the collected data.
 
