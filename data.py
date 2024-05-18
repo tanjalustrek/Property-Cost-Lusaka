@@ -55,6 +55,3 @@ def find_property():
             else:
                 # Print error message if fetching page failed
                 print(f"Failed to fetch page {page_number}. Status code: {response.status_code}")
-
-# Call the function to start scraping property data
-find_property()
