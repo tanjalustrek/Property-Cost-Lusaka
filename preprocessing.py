@@ -1,12 +1,5 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.metrics import mean_squared_error
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import KFold
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.ensemble import RandomForestRegressor
 from data import find_property 
 from exchange_rate import fetch_eur_exchange_rate
 
@@ -14,7 +7,6 @@ def preprocess_data():
     # Import apartments data fetched from Property24
     find_property()
     data = pd.read_csv('property.csv')
-    column_names = data.columns
 
     # Get the current exchange rate
     exchange_rate = fetch_eur_exchange_rate()
@@ -40,11 +32,6 @@ def preprocess_data():
     # Calculate the mean and standard deviation for each column
     mean = data.mean()
     std = data.std()
-
-    print('Means:')
-    print(mean)
-    print('Standard daviations:')
-    print(std)
 
     # Removing outliers based on
     # 'Price'
