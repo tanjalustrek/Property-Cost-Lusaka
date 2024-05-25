@@ -5,7 +5,8 @@ import requests
 
 def find_property():
     # Base URL for properties in Lusaka (capital of Zambia), with a placeholder for the page number
-    base_url = 'https://www.property24.co.zm/apartments-flats-for-sale-in-lusaka-c2327?Page={}'
+    #base_url = 'https://www.property24.co.zm/apartments-flats-for-sale-in-lusaka-c2327?Page={}'
+    base_url = 'https://www.property24.com/for-sale/cape-town/western-cape/432/p{}'
 
     # Open CSV file for writing data
     with open('property.csv', 'w', newline='', encoding='utf-8') as csvfile:
@@ -16,8 +17,8 @@ def find_property():
         # Write CSV header row
         writer.writeheader()
 
-        # Loop through pages 1 to 10
-        for page_number in range(1, 11):
+        # Loop through pages 1 to 381
+        for page_number in range(1, 381):
             # Construct the URL for the current page
             url = base_url.format(page_number)
             # Send a GET request to the URL
@@ -30,7 +31,7 @@ def find_property():
                 # Parse the HTML content using BeautifulSoup
                 soup = BeautifulSoup(html_text, 'lxml')
                 # Find all property elements on the page
-                properties = soup.find_all('span', class_='p24_content')
+                properties = soup.find_all('div', class_='p24_content')
 
                 # Loop through each property element found
                 for property in properties:
