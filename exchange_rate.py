@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def fetch_eur_exchange_rate():
     # Define the URL for currency conversion
-    url = 'https://www.xe.com/currencyconverter/convert/?Amount=1&From=EUR&To=ZMW'
+    url = 'https://www.xe.com/currencyconverter/convert/?Amount=1&From=EUR&To=ZAR'
 
     # Send a GET request to fetch the HTML content
     html_text = requests.get(url)
