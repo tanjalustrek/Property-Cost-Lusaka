@@ -3,6 +3,7 @@ import numpy as np
 from data import find_property 
 from exchange_rate import fetch_eur_exchange_rate
 
+# The purpose of this function is to prep the fetched data to ensure it's ready for detailed analysis later on
 def preprocess_data():
     # Import apartments data fetched from Property24
     find_property()
