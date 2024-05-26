@@ -23,7 +23,7 @@ I develop machine learning models to predict property prices based on the collec
 - `README.md`: You're reading it right now!
 
 ## Usage
-To view the results generated on 7/5/2024, simply open the `analysis.ipynb` file in your preferred Jupyter notebook environment.
+To view the results generated on 25/5/2024, simply open the `analysis.ipynb` file in your preferred Jupyter notebook environment.
 
 If you wish to reproduce the analysis or run the code with updated data, clone or download this repository to your local machine and run the `analysis.ipynb` file in your Jupyter notebook environment to execute the analysis and view the results (make sure you have Python installed along with other necessary dependencies). Be aware that the data fetching will take quite a long time as there is a lot of data to get through.
 
