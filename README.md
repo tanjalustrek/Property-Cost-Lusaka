@@ -1,4 +1,4 @@
-# Property Cost Lusaka
+# Property Cost in Cape Town
 
 This repository contains code for scraping information about properties being sold in Cape Town and building machine learning models to predict property prices based on the collected data.
 
