@@ -15,7 +15,7 @@ I develop machine learning models to predict property prices based on the collec
 - `data.py`: Contains the function used to scrape the data.
 - `exchange_rate.py`: Contains the function used to get the current exchange rate from South African Rand (ZAR) to Euro (EUR).
 - `preprocessing.py`: Contains the function used to preprocess the data.
-- `propery.csv`: The CSV file created by running the function in the `preprocessing.py` file.
+- `property.csv`: The CSV file created by running the function in the `preprocessing.py` file.
 - `size.py`: Contains the function used to predict and fill the mising size values.
 - `predict.py`: Contains the function used for model training and evaluation.
 - `predict_your_price.py`: Contains the function used to predict the property value based on given parameters.
