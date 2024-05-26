@@ -6,7 +6,7 @@ from exchange_rate import fetch_eur_exchange_rate
 # The purpose of this function is to prep the fetched data to ensure it's ready for detailed analysis later on
 def preprocess_data():
     # Import apartments data fetched from Property24
-    #find_property()
+    find_property() # This line takes quite a bit of time as there is a lot of data to get through
     data = pd.read_csv('property.csv')
 
     # Get the current exchange rate
